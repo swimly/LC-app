@@ -1,0 +1,210 @@
+@charset "utf-8";
+$input_border:#ccc;
+$input_bg:#fff;
+$input_ht:32px;
+$input_mini_ht:24px;
+$input_conner:5px;
+$input_focus:#64BD63;
+/*input*/
+.app-input{
+    height:$input_ht;
+    line-height:$input_ht;
+    border:1px solid $input_border;
+    padding:0 1rem;
+    &:focus{
+        border-color:$input_focus;
+        box-shadow:0 1px 4px 0 lighten($input_focus,40%),0 3px 12px 0 lighten($input_focus,40%);
+    }
+}
+.app-input-block{
+    @extend .app-input;
+    width:100%;
+}
+.app-input-conner{
+    @extend .app-input;
+    border-radius:$input_conner;
+}
+.app-input-round{
+    @extend .app-input;
+    border-radius:$input_ht/2;
+}
+/*radio*/
+$radioSize:22px;
+$radioColor:#64BD63;
+$radioBorder:2px;
+.app-radio{
+    padding-left:$radioSize;
+    position:relative;
+    min-height:$radioSize;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+.app-radio span{
+    position:absolute;
+    left:0;
+    top:0;
+    display:inline-block;
+    width:$radioSize;
+    height:$radioSize;
+    border-radius:$radioSize/2;
+    border:$radioBorder solid $radioColor;
+    z-index:1;
+}
+.app-radio label{
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    height:$radioSize;
+    line-height:$radioSize;
+}
+.app-radio input{
+    position:absolute;
+    left:$radioBorder;
+    top:$radioBorder;
+    width:$radioSize;
+    hegiht:$radioSize;
+    z-index:2;
+    transform: scale(2);
+    opacity: 0;
+}
+.app-radio input[type="radio"]:checked + span:before{
+    content:"•";
+    font-size:$radioSize;
+    color:$radioColor;
+    position:absolute;
+    width:$radioSize;
+    height:$radioSize;
+    text-align:center;
+    line-height:$radioSize;
+    margin-top:-$radioBorder;
+    margin-left:-$radioBorder;
+}
+/*checkbox*/
+$checkboxSize:22px;
+$checkboxfs:14px;
+$checkboxColor:#64BD63;
+$checkboxBorder:2px;
+.app-checkbox{
+    padding-left:$checkboxSize;
+    position:relative;
+    min-height:$checkboxSize;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+.app-checkbox span{
+    position:absolute;
+    left:0;
+    top:0;
+    display:inline-block;
+    width:$checkboxSize;
+    height:$checkboxSize;
+    border-radius:$checkboxSize/5;
+    border:$checkboxBorder solid $checkboxColor;
+    z-index:1;
+    transition:200ms ease-in all;
+}
+.app-checkbox label{
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    height:$checkboxSize;
+    line-height:$checkboxSize;
+}
+.app-checkbox input{
+    position:absolute;
+    left:$checkboxBorder;
+    top:$checkboxBorder;
+    width:$checkboxSize;
+    hegiht:$checkboxSize;
+    z-index:2;
+    transform: scale(2);
+    opacity: 0;
+}
+.app-checkbox input[type="checkbox"]:checked + span:before{
+    content:"\2714";
+    font-size:$checkboxfs;
+    color:$checkboxColor;
+    position:absolute;
+    width:$checkboxSize;
+    height:$checkboxSize;
+    text-align:center;
+    line-height:$checkboxSize;
+    margin-top:-$checkboxBorder;
+    margin-left:-$checkboxBorder;
+}
+/*switch*/
+@mixin borderRadius($radius:20px) {
+  border-radius: $radius;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+ 
+$duration: .4s;
+$checkedColor: #64bd63;
+.mui-switch {
+  width: 52px;
+  height: 31px;
+  position: relative;
+  border: 1px solid #dfdfdf;
+  background-color: #fdfdfd;
+  box-shadow: #dfdfdf 0 0 0 0 inset;
+  @include borderRadius();
+  background-clip: content-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  user-select: none;
+  outline: none;
+  &:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    @include borderRadius();
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  &:checked {
+    border-color: $checkedColor;
+    box-shadow: $checkedColor 0 0 0 16px inset;
+    background-color: $checkedColor;
+    &:before {
+      left: 21px;
+    }
+  }
+  &.mui-switch-animbg {
+    transition: background-color ease $duration;
+    &:before {
+      transition: left 0.3s;
+    }
+    &:checked {
+      box-shadow: #dfdfdf 0 0 0 0 inset;
+      background-color: $checkedColor;
+      transition: border-color $duration, background-color ease $duration;
+      &:before {
+        transition: left 0.3s;
+      }
+    }
+ 
+  }
+  &.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) $duration, box-shadow cubic-bezier(0, 0, 0, 1) $duration;
+    &:before {
+      transition: left 0.3s;
+    }
+    &:checked {
+      box-shadow: $checkedColor 0 0 0 16px inset;
+      background-color: $checkedColor;
+      transition: border ease $duration, box-shadow ease $duration, background-color ease $duration*3;
+      &:before {
+        transition: left 0.3s;
+      }
+    }
+ 
+  }
+}

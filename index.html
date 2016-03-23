@@ -1,10 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-
+<div class="app">
+    <div class="app-header">
+        <h1 class="app-title">模块</h1>
+    </div>
+    <div class="app-main">
+        <h1>1、按钮</h1>
+        <input class="app-button-primary app-button-conner" type="button" value="测试按钮" />
+        <input class="app-button-primary app-button-round" type="button" value="测试按钮" />
+        <input class="app-button-primary" type="button" value="测试按钮" />
+        <input class="app-button-light app-button-conner" type="button" value="测试按钮" />
+        <input class="app-button-light app-button-round" type="button" value="测试按钮" />
+        <input class="app-button-light" type="button" value="测试按钮" />
+        <h1>2、输入框</h1>
+        <input class="app-input" type="text" />
+        <div style="height:10px;"></div>
+        <input class="app-input-block" type="text" />
+        <div style="height:10px;"></div>
+        <input class="app-input-block app-input-conner" type="text" />
+        <div style="height:10px;"></div>
+        <input class="app-input-block app-input-round" type="text" />
+        <h1>3、单选多选</h1>
+        <div class="app-radio">
+            <input type="radio" name="sex" id="boy" />
+            <span></span>
+            <label for="boy">男</label>
+        </div>
+        <div class="app-radio">
+            <input type="radio" name="sex" id="girl" />
+            <span></span>
+            <label for="girl">女</label>
+        </div>
+        <div style="height:10px;"></div>
+        <div class="app-checkbox">
+            <input type="checkbox" name="sex1" id="boy1" />
+            <span></span>
+            <label for="boy1">男</label>
+        </div>
+        <div class="app-checkbox">
+            <input type="checkbox" name="sex1" id="girl1" />
+            <span></span>
+            <label for="girl1">女</label>
+        </div>
+        <h1>4、开关</h1>
+        <label><input class="mui-switch" type="checkbox"> 默认未选中</label><br />
+        <label><input class="mui-switch" type="checkbox" checked> 默认选中</label><br />
+        <label><input class="mui-switch mui-switch-animbg" type="checkbox"> 默认未选中,简单的背景过渡效果,加mui-switch-animbg类即可</label><br />
+        <label><input class="mui-switch mui-switch-animbg" type="checkbox" checked> 默认选中</label><br />
+        <label><input class="mui-switch mui-switch-anim" type="checkbox"> 默认未选中，过渡效果，加 mui-switch-anim类即可</label><br />
+        <label><input class="mui-switch mui-switch-anim" type="checkbox" checked> 默认选中</label>
+        <h1>5、折叠面板</h1>
+        <ul class="app-table-view">
+            <li class="app-table-view-cell">
+                <a href="#">表单</a>
+                <div class="app-table-content">
+                    <input class="app-input" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block app-input-conner" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block app-input-round" type="text" />
+                </div>
+            </li>
+            <li class="app-table-view-cell">
+                <a href="#">表单</a>
+                <div class="app-table-content">
+                    <input class="app-input" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block app-input-conner" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block app-input-round" type="text" />
+                </div>
+            </li>
+            <li class="app-table-view-cell">
+                <a href="#">表单</a>
+                <div class="app-table-content">
+                    <input class="app-input" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block app-input-conner" type="text" />
+                    <div style="height:10px;"></div>
+                    <input class="app-input-block app-input-round" type="text" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="app-footer"></div>
+</div>
 </body>
 </html>

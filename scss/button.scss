@@ -1,0 +1,49 @@
+$fontnormalColor:#474747;
+$button_height:32px;
+$button_plr:15px;
+$button_primary:#64BD63;
+$button_conner:5px;
+$button_light:#CCCCCC;
+$button_light_bg:#F7F7F7;
+.app-button{
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    height:$button_height;
+    line-height:$button_height;
+    padding:0 $button_plr;
+    outline: none;
+    border:none;
+    &:hover{
+        opacity:0.9;
+        filter:alpha(opacity=90);
+    }
+    &:active{
+        opacity:1;
+        filter:alpha(opacity=100);
+    }
+}
+.app-button-primary{
+    @extend .app-button;
+    background:$button_primary;
+    color:#fff;
+}
+.app-button-light{
+    @extend .app-button;
+    background:#fff;
+    border:1px solid $button_light;
+    color:$fontnormalColor;
+    background-color:$button_light_bg;
+}
+.app-button-conner{
+    border-radius:$button_conner;
+}
+.app-button-round{
+    border-radius:$button_height/2;
+}
+.app-button-block{
+    @extend .app-button;
+    display:block;
+    width:100%;
+    text-align:center;
+}

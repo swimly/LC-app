@@ -1,1 +1,52 @@
-$color:#f00;
+/*var*/
+$header_height:40px;
+$header_bg:#3990C9;
+$footer_height:50px;
+$footer_bg:#eee;
+$footer_bc:#ccc;
+$title_fs:1.6rem;
+$title_c:#fff;
+$main_pad:10px;
+$linkColor:#08c;
+/*reset*/
+@import "reset";
+a{
+    text-decoration: none;
+    color:$linkColor;
+    &:hover{
+        color:darken($linkColor,10%);
+    }
+}
+.app{height:100%;padding:$header_height 0 $footer_height 0;}
+.app-header{
+    height:$header_height;
+    background:$header_bg;
+    margin-top:-$header_height;
+}
+.app-title{
+    text-align:center;
+    color:$title_c;
+    font-size:$title_fs;
+    height:$header_height;
+    line-height:$header_height;
+    background:transparent;
+    padding:0;
+    margin:0;
+}
+.app-main{
+    height:100%;
+    overflow:auto;
+    padding:$main_pad;
+    position:relative;
+}
+.app-footer{
+    height:$footer_height;
+    background:$footer_bg;
+    border-top:1px solid $footer_bc;
+}
+/*button*/
+@import "button";
+/*form*/
+@import "form";
+/*table-view*/
+@import "table-view";

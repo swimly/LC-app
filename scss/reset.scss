@@ -1,0 +1,31 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { padding: 0; margin: 0; } 
+table {border-collapse: collapse; border-spacing: 0; table-layout:fixed;} 
+fieldset,img {border: 0;} 
+address,caption,cite,code,dfn,em,strong,th,var {font-weight: normal; font-style: normal;} 
+ol,ul {list-style: none;} 
+i{font-style: normal;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;font-size:100%;} 
+input,textarea,button{outline:none;}
+input:focus,textarea:focus{outline:none;}
+a{-webkit-tap-highlight-color: transparent;text-decoration:none;display:inline-block;}
+html{overflow:auto;font-size:62.5%;}
+html,body{height:100%;}
+body,input{font-family: Helvetica Neue,Tahoma,Arial,"Microsoft Yahei","宋体","黑体";}
+@mixin box-sizing($sizing){
+    -webkit-box-sizing: $sizing;
+    -moz-box-sizing: $sizing;
+    box-sizing: $sizing;
+}
+*{@include box-sizing(border-box);}
+input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;appearance: none;}
+.clearfix{
+    &:before,&:after{
+        content:"";
+        display:table;
+    }
+    &:after{
+        clear: both;
+        overflow: hidden;
+    }
+}
+h1{font-size:1.6rem;padding:10px;background:#F7F7F7;margin:10px 0;}
