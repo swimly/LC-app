@@ -112,5 +112,13 @@ a:hover { color: #006699; }
 .mui-switch.mui-switch-anim:checked:before { transition: left 0.3s; }
 
 /*table-view*/
+.app-table-view .app-table-view-cell { line-height: 40px; }
+.app-table-view .app-table-view-cell a { height: 40px; line-height: 40px; padding: 0 1em; display: block; border-bottom: 1px solid #F7F7F7; font-size: 1.4rem; color: #484848; position: relative; }
+.app-table-view .app-table-view-cell a:last-child { border: none; }
+.app-table-view .app-table-view-cell a:before { content: "﹥"; position: absolute; right: 0; top: 0; display: block; height: 40px; line-height: 40px; width: 40px; text-align: center; font-size: 2rem; color: #B7B7B7; transition: 0.3s; }
+.app-table-view .app-table-view-cell .app-table-content { height: 0; overflow: hidden; transition: height 0.3s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.app-table-view .app-table-view-cell:hover a { background: #F7F7F7; border: none; }
+.app-table-view .app-table-view-cell:hover a:before { transform: rotate(90deg); }
+.app-table-view .app-table-view-cell:hover .app-table-content { height: auto; padding: 1rem; }
 
 /*# sourceMappingURL=main.css.map */

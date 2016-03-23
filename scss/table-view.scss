@@ -1,4 +1,53 @@
+@charset "utf-8";
 $cellheight:40px;
 .app-table-view{
-
+  .app-table-view-cell{
+    line-height:$cellheight;
+    a{
+      height:$cellheight;
+      line-height:$cellheight;
+      padding:0 1em;
+      display:block;
+      border-bottom:1px solid #F7F7F7;
+      font-size:1.4rem;
+      color:#484848;
+      position:relative;
+    }
+    a:last-child{
+      border:none;
+    }
+    a:before{
+      content:"﹥";
+      position:absolute;
+      right:0;
+      top:0;
+      display:block;
+      height:$cellheight;
+      line-height:$cellheight;
+      width:$cellheight;
+      text-align: center;
+      font-size:2rem;
+      color:#B7B7B7;
+      transition: 0.3s;
+    }
+    .app-table-content{
+      height:0;
+      overflow:hidden;
+      transition:height 0.3s;
+      @include box-sizing(border-box);
+    }
+    &:hover{
+      a{
+        background:#F7F7F7;
+        border:none;
+      }
+      a:before{
+        transform: rotate(90deg);
+      }
+      .app-table-content{
+        height:auto;
+        padding:1rem;
+      }
+    }
+  }
 }
