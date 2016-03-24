@@ -3,7 +3,7 @@ $input_border:#ccc;
 $input_bg:#fff;
 $input_ht:32px;
 $input_mini_ht:24px;
-$input_conner:5px;
+$input_conner:4px;
 $input_focus:#64BD63;
 /*input*/
 .app-input{
@@ -39,8 +39,7 @@ $radioBorder:2px;
     display:inline-block;
     zoom:1;
     *display:inline;
-}
-.app-radio span{
+  span{
     position:absolute;
     left:0;
     top:0;
@@ -50,15 +49,15 @@ $radioBorder:2px;
     border-radius:$radioSize/2;
     border:$radioBorder solid $radioColor;
     z-index:1;
-}
-.app-radio label{
+  }
+  label{
     display:inline-block;
     zoom:1;
     *display:inline;
     height:$radioSize;
     line-height:$radioSize;
-}
-.app-radio input{
+  }
+  input{
     position:absolute;
     left:$radioBorder;
     top:$radioBorder;
@@ -67,18 +66,19 @@ $radioBorder:2px;
     z-index:2;
     transform: scale(2);
     opacity: 0;
-}
-.app-radio input[type="radio"]:checked + span:before{
-    content:"•";
-    font-size:$radioSize;
-    color:$radioColor;
-    position:absolute;
-    width:$radioSize;
-    height:$radioSize;
-    text-align:center;
-    line-height:$radioSize;
-    margin-top:-$radioBorder;
-    margin-left:-$radioBorder;
+    &[type="radio"]:checked + span:before{
+      content:"•";
+      font-size:$radioSize;
+      color:$radioColor;
+      position:absolute;
+      width:$radioSize;
+      height:$radioSize;
+      text-align:center;
+      line-height:$radioSize;
+      margin-top:-$radioBorder;
+      margin-left:-$radioBorder;
+    }
+  }
 }
 /*checkbox*/
 $checkboxSize:22px;
@@ -92,8 +92,7 @@ $checkboxBorder:2px;
     display:inline-block;
     zoom:1;
     *display:inline;
-}
-.app-checkbox span{
+  span{
     position:absolute;
     left:0;
     top:0;
@@ -104,15 +103,15 @@ $checkboxBorder:2px;
     border:$checkboxBorder solid $checkboxColor;
     z-index:1;
     transition:200ms ease-in all;
-}
-.app-checkbox label{
+  }
+  label{
     display:inline-block;
     zoom:1;
     *display:inline;
     height:$checkboxSize;
     line-height:$checkboxSize;
-}
-.app-checkbox input{
+  }
+  input{
     position:absolute;
     left:$checkboxBorder;
     top:$checkboxBorder;
@@ -121,18 +120,19 @@ $checkboxBorder:2px;
     z-index:2;
     transform: scale(2);
     opacity: 0;
-}
-.app-checkbox input[type="checkbox"]:checked + span:before{
-    content:"\2714";
-    font-size:$checkboxfs;
-    color:$checkboxColor;
-    position:absolute;
-    width:$checkboxSize;
-    height:$checkboxSize;
-    text-align:center;
-    line-height:$checkboxSize;
-    margin-top:-$checkboxBorder;
-    margin-left:-$checkboxBorder;
+    &[type="checkbox"]:checked + span:before{
+      content:"\2714";
+      font-size:$checkboxfs;
+      color:$checkboxColor;
+      position:absolute;
+      width:$checkboxSize;
+      height:$checkboxSize;
+      text-align:center;
+      line-height:$checkboxSize;
+      margin-top:-$checkboxBorder;
+      margin-left:-$checkboxBorder;
+    }
+  }
 }
 /*switch*/
 @mixin borderRadius($radius:20px) {

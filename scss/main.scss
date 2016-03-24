@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*var*/
 $header_height:40px;
 $header_bg:#3990C9;
@@ -17,32 +18,36 @@ a{
         color:darken($linkColor,10%);
     }
 }
-.app{height:100%;padding:$header_height 0 $footer_height 0;}
-.app-header{
+/*整体框架*/
+.app{
+    height:100%;
+    padding:$header_height 0 $footer_height 0;
+  .app-header{
     height:$header_height;
     background:$header_bg;
     margin-top:-$header_height;
-}
-.app-title{
-    text-align:center;
-    color:$title_c;
-    font-size:$title_fs;
-    height:$header_height;
-    line-height:$header_height;
-    background:transparent;
-    padding:0;
-    margin:0;
-}
-.app-main{
+    .app-title{
+      text-align:center;
+      color:$title_c;
+      font-size:$title_fs;
+      height:$header_height;
+      line-height:$header_height;
+      background:transparent;
+      padding:0;
+      margin:0;
+    }
+  }
+  .app-main{
     height:100%;
     overflow:auto;
     padding:$main_pad;
     position:relative;
-}
-.app-footer{
+  }
+  .app-footer{
     height:$footer_height;
     background:$footer_bg;
     border-top:1px solid $footer_bc;
+  }
 }
 /*button*/
 @import "button";
@@ -52,3 +57,5 @@ a{
 @import "table-view";
 /*actionsheet*/
 @import "actionsheet";
+/*badge*/
+@import "badge";

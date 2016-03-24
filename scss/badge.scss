@@ -1,0 +1,16 @@
+.app-badge{
+  display:inline-block;
+  font-size:1.2rem;
+  padding:3px 8px;
+  color:#fff;
+  border-radius:0.9rem;
+  &.app-badge-blue{
+    background-color: #3990C9;
+  }
+  &.app-badge-red{
+    background-color: #EA2000;
+  }
+  &.app-badge-orange{
+    background-color: #E09039;
+  }
+}

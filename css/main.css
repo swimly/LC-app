@@ -39,15 +39,12 @@ h1 { font-size: 1.6rem; padding: 10px; background: #F7F7F7; margin: 10px 0; }
 a { text-decoration: none; color: #08c; }
 a:hover { color: #006699; }
 
+/*整体框架*/
 .app { height: 100%; padding: 40px 0 50px 0; }
-
-.app-header { height: 40px; background: #3990C9; margin-top: -40px; }
-
-.app-title { text-align: center; color: #fff; font-size: 1.6rem; height: 40px; line-height: 40px; background: transparent; padding: 0; margin: 0; }
-
-.app-main { height: 100%; overflow: auto; padding: 10px; position: relative; }
-
-.app-footer { height: 50px; background: #eee; border-top: 1px solid #ccc; }
+.app .app-header { height: 40px; background: #3990C9; margin-top: -40px; }
+.app .app-header .app-title { text-align: center; color: #fff; font-size: 1.6rem; height: 40px; line-height: 40px; background: transparent; padding: 0; margin: 0; }
+.app .app-main { height: 100%; overflow: auto; padding: 10px; position: relative; }
+.app .app-footer { height: 50px; background: #eee; border-top: 1px solid #ccc; }
 
 /*button*/
 .app-button, .app-button-primary, .app-button-light, .app-button-block { display: inline-block; zoom: 1; *display: inline; height: 32px; line-height: 32px; padding: 0 15px; outline: none; border: none; }
@@ -71,30 +68,22 @@ a:hover { color: #006699; }
 
 .app-input-block { width: 100%; }
 
-.app-input-conner { border-radius: 5px; }
+.app-input-conner { border-radius: 4px; }
 
 .app-input-round { border-radius: 16px; }
 
 /*radio*/
 .app-radio { padding-left: 22px; position: relative; min-height: 22px; display: inline-block; zoom: 1; *display: inline; }
-
 .app-radio span { position: absolute; left: 0; top: 0; display: inline-block; width: 22px; height: 22px; border-radius: 11px; border: 2px solid #64BD63; z-index: 1; }
-
 .app-radio label { display: inline-block; zoom: 1; *display: inline; height: 22px; line-height: 22px; }
-
 .app-radio input { position: absolute; left: 2px; top: 2px; width: 22px; hegiht: 22px; z-index: 2; transform: scale(2); opacity: 0; }
-
 .app-radio input[type="radio"]:checked + span:before { content: "•"; font-size: 22px; color: #64BD63; position: absolute; width: 22px; height: 22px; text-align: center; line-height: 22px; margin-top: -2px; margin-left: -2px; }
 
 /*checkbox*/
 .app-checkbox { padding-left: 22px; position: relative; min-height: 22px; display: inline-block; zoom: 1; *display: inline; }
-
 .app-checkbox span { position: absolute; left: 0; top: 0; display: inline-block; width: 22px; height: 22px; border-radius: 4.4px; border: 2px solid #64BD63; z-index: 1; transition: 200ms ease-in all; }
-
 .app-checkbox label { display: inline-block; zoom: 1; *display: inline; height: 22px; line-height: 22px; }
-
 .app-checkbox input { position: absolute; left: 2px; top: 2px; width: 22px; hegiht: 22px; z-index: 2; transform: scale(2); opacity: 0; }
-
 .app-checkbox input[type="checkbox"]:checked + span:before { content: "\2714"; font-size: 14px; color: #64BD63; position: absolute; width: 22px; height: 22px; text-align: center; line-height: 22px; margin-top: -2px; margin-left: -2px; }
 
 /*switch*/
@@ -127,5 +116,11 @@ a:hover { color: #006699; }
 .app-actionsheet.app-show .app-actionsheet-wrap { transition: 0.3s; bottom: 0; }
 .app-actionsheet .app-actionsheet-wrap { transition: 0.3s; position: absolute; width: 100%; bottom: -100%; padding: 0 2rem; }
 .app-actionsheet .app-actionsheet-wrap .app-button, .app-actionsheet .app-actionsheet-wrap .app-button-primary, .app-actionsheet .app-actionsheet-wrap .app-button-light, .app-actionsheet .app-actionsheet-wrap .app-button-block { margin-bottom: 1rem; }
+
+/*badge*/
+.app-badge { display: inline-block; font-size: 1.2rem; padding: 3px 8px; color: #fff; border-radius: 0.9rem; }
+.app-badge.app-badge-blue { background-color: #3990C9; }
+.app-badge.app-badge-red { background-color: #EA2000; }
+.app-badge.app-badge-orange { background-color: #E09039; }
 
 /*# sourceMappingURL=main.css.map */
