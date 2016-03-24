@@ -121,4 +121,11 @@ a:hover { color: #006699; }
 .app-table-view .app-table-view-cell:hover a:before { transform: rotate(90deg); }
 .app-table-view .app-table-view-cell:hover .app-table-content { height: auto; padding: 1rem; }
 
+/*actionsheet*/
+.app-actionsheet { display: none; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0, 0, 0, 0.7); z-index: 100; }
+.app-actionsheet.app-show { display: block; }
+.app-actionsheet.app-show .app-actionsheet-wrap { transition: 0.3s; bottom: 0; }
+.app-actionsheet .app-actionsheet-wrap { transition: 0.3s; position: absolute; width: 100%; bottom: -100%; padding: 0 2rem; }
+.app-actionsheet .app-actionsheet-wrap .app-button, .app-actionsheet .app-actionsheet-wrap .app-button-primary, .app-actionsheet .app-actionsheet-wrap .app-button-light, .app-actionsheet .app-actionsheet-wrap .app-button-block { margin-bottom: 1rem; }
+
 /*# sourceMappingURL=main.css.map */
