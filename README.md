@@ -1,3 +1,3 @@
 # LC-app
-longrise前端框架（scss）
+前端框架（scss）
 readme
